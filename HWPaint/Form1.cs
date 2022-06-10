@@ -73,17 +73,17 @@ namespace HWPaint
         }
 
         private void button1_Click(object sender, EventArgs e)
-        { 
+        {
                 try 
                 { 
-                Pen pn = new Pen(pan_Col.BackColor, trackBar1.Value);
-                int X = Convert.ToInt32(X_cord.Text);
-                int Y = Convert.ToInt32(Y_cord.Text);
-                int H = Convert.ToInt32(Height.Text);
-                int W = Convert.ToInt32(Widtht.Text);
+            Pen pn = new Pen(pan_Col.BackColor, trackBar1.Value);
+            int X = Convert.ToInt32(X_cord.Text);
+            int Y = Convert.ToInt32(Y_cord.Text);
+            int H = Convert.ToInt32(Height.Text);
+            int W = Convert.ToInt32(Widtht.Text);
 
-                Rectangle rect = new Rectangle(X, Y, W, H);
-                graphics.DrawRectangle(pn, rect);
+            Rectangle rect = new Rectangle(X, Y, W, H);
+            graphics.DrawRectangle(pn, rect);
                 }catch(System.FormatException)
                 {
                     string Err = "Введите верное значение!!!";
